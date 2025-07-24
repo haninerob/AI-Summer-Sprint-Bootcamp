@@ -54,8 +54,8 @@ def validate_input_data(csv_string):
 
     # Use imported validators
     df = validate_required_columns(df, required_columns, default_means)
-    validate_numeric_columns(df, numeric_columns)
     df = validate_missing_values(df, default_means)
+    validate_numeric_columns(df, numeric_columns)
     validate_row_count(df)
     df = remove_duplicates(df)
 
